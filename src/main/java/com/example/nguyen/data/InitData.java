@@ -27,10 +27,10 @@ public class InitData {
     @PostConstruct
     public void insertData() {
         Role roleAdmin = new Role();
-        roleAdmin.setName("admin");
+        roleAdmin.setName("ROLE_ADMIN");
 
         Role roleUser = new Role();
-        roleUser.setName("user");
+        roleUser.setName("ROLE_USER");
 
         User admin = new User();
         admin.setUserName("admin");

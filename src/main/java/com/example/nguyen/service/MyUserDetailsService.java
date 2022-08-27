@@ -36,7 +36,7 @@ public class MyUserDetailsService implements UserDetailsService {
         List<String> roleNames = roles.stream().map(Role::getName).collect(Collectors.toList());
         UserDetails userDetail = org.springframework.security.core.userdetails.User
                 .withUsername(user.getUserName())
-                .password(user.getPassword())
+                .password("{noop}"+ user.getPassword())
                 .authorities(roleNames.toArray(new String[0]))
                 .build();
         return userDetail;
