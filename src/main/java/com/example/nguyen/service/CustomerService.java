@@ -6,12 +6,12 @@
 package com.example.nguyen.service;
 
 import com.example.nguyen.entities.Customer;
-import com.example.nguyen.repository.CustomerRepositoryIF;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.example.nguyen.repository.CustomerRepository;
 
 /**
  *
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 public class CustomerService implements CustomerServiceIF{
 
     @Autowired
-    CustomerRepositoryIF customerRepositoryIF; 
+    CustomerRepository customerRepositoryIF; 
     
     @Override
     public List<Customer> getCustomers() {

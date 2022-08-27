@@ -5,13 +5,13 @@
  */
 package com.example.nguyen.repository;
 
-import com.example.nguyen.entities.Customer;
+import com.example.nguyen.entities.Role;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author XV
  */
-public interface CustomerRepositoryIF extends CrudRepository<Customer, Integer> {
+public interface RoleRepository extends CrudRepository<Role, Long> {
     
 }
