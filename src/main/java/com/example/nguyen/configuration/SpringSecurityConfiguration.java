@@ -29,12 +29,14 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .authorizeRequests().antMatchers("/","/index","/resources/**").permitAll()
+                .authorizeRequests().antMatchers("/", "/index", "/uploadForm", "/upload", "/resources/**").permitAll()
                 .antMatchers("/customer/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
-                .and().httpBasic();
+                .and().httpBasic()
+                .and()
+                .csrf().disable();
     }
-    
+
     @Bean
     public MyUserDetailsService createMyUserDetailsService() {
         return new MyUserDetailsService();
